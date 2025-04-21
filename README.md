@@ -24,7 +24,9 @@ QuickTickets is a comprehensive and modern web application for booking movie tic
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB with Mongoose
 - **Authentication**: JSON Web Token (JWT)
-
+- **Payment**: Stripe, Razorpay
+- **Others**: Cloudinary, Nodemailer, YouTube API (react-youtube), Toastify, Lucide React, Recharts
+  
 ---
 
 ## 💻 Installation
