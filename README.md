@@ -32,7 +32,7 @@ QuickTickets is a comprehensive and modern web application for booking movie tic
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/QuickTickets
+git clone https://github.com/Keval-Patel01/QuickTickets
 ```
 
 2. **Install all dependencies**
