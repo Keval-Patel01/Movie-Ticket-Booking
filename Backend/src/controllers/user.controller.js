@@ -370,65 +370,9 @@ const changePassword = asyncHandler(async (req, res) => {
     .json(new ApiResponce(200, null, "Password changed successfully")); // Fixed typo: ApiResponce -> ApiResponse
 });
 
-// const forgotPassword = asyncHandler(async (req, res) => {
-//   const { email } = req.body;
-
-//   // Validate email
-//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   if (!email || !emailRegex.test(email)) {
-//     throw new ApiError(400, "A valid email is required");
-//   }
-
-//   // Find user
-//   const user = await User.findOne({ email });
-//   if (!user) {
-//     return res
-//       .status(200)
-//       .json(
-//         new ApiResponse(
-//           200,
-//           null,
-//           "If the email exists, a reset link has been sent"
-//         )
-//       );
-//   }
-
-//   // Generate and hash reset token
-//   const resetToken = crypto.randomBytes(32).toString("hex");
-//   const hashedToken = crypto
-//     .createHash("sha256")
-//     .update(resetToken)
-//     .digest("hex");
-//   user.resetPasswordToken = hashedToken;
-//   user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // 10 minutes
-//   await user.save({ validateBeforeSave: false });
-
-//   // Send email
-//   const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
-//   const message = `You (or someone else) requested a password reset. Click the link below to reset your password:\n\n${resetUrl}\n\nThis link expires in 10 minutes.`;
-
-//   try {
-//     await sendEmail({
-//       email: user.email,
-//       subject: "Password Reset Request",
-//       message,
-//     });
-//     return res
-//       .status(200)
-//       .json(new ApiResponse(200, null, "Email sent successfully"));
-//   } catch (error) {
-//     // Rollback on failure
-//     user.resetPasswordToken = undefined;
-//     user.resetPasswordExpire = undefined;
-//     await user.save({ validateBeforeSave: false });
-//     console.log("Error sending email:", error);
-//     throw new ApiError(500, "Failed to send email");
-//   }
-// });
 const forgotPassword = asyncHandler(async (req, res) => {
   const { email } = req.body;
 
-  // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!email) {
     throw new ApiError(400, "A valid email is required");
   }
