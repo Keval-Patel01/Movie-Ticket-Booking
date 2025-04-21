@@ -6,17 +6,15 @@ QuickTickets is a comprehensive and modern web application for booking movie tic
 
 ## 🚀 Features
 
-Features
-
--🎬 Explore Movies & Showtimes — Browse latest releases and upcoming films.
--⏰ Seat Selection — Interactive seat maps with real-time locking.
--💳 Secure Payments — Integrates with secure payment gateways.
--🗓️ E-Tickets & Booking History — View and manage past bookings.
--📊 Admin Analytics Dashboard — Insights on ticket sales and user activity.
--📄 Theater Management Tools — For showtime, seat, and pricing management.
--🔍 Global Search — Quickly find movies, theaters, or showtimes.
--🛡️ JWT-Based Authentication — Safe and role-secured login.
--💡 Responsive UI — Optimized for desktop, tablet, and mobile devices.
+- 🎬 **Explore Movies & Showtimes** — Browse latest releases and upcoming films.
+- ⏰ **Seat Selection** — Interactive seat maps with real-time locking.
+- 💳 **Secure Payments** — Integrates with secure payment gateways.
+- 🗓️ **E-Tickets & Booking History** — View and manage past bookings.
+- 📊 **Admin Analytics Dashboard** — Insights on ticket sales and user activity.
+- 📄 **Theater Management Tools** — For showtime, seat, and pricing management.
+- 🔍 **Global Search** — Quickly find movies, theaters, or showtimes.
+- 🛡️ **JWT-Based Authentication** — Safe and role-secured login.
+- 💡 **Responsive UI** — Optimized for desktop, tablet, and mobile devices.
 
 ---
 
@@ -24,8 +22,8 @@ Features
 
 - **Frontend**: React.js, Tailwind CSS, ShadCN/UI, Axios, React Router
 - **Backend**: Node.js, Express.js
-- **Database**: MongoDB (Mongoose ODM)
-- **Authentication**: JWT (JSON Web Token)
+- **Database**: MongoDB with Mongoose
+- **Authentication**: JSON Web Token (JWT)
 
 ---
 
@@ -37,7 +35,7 @@ Features
 git clone https://github.com/your-username/QuickTickets
 ```
 
-2. **Install dependencies**
+2. **Install all dependencies**
 
 ```bash
 cd Backend
@@ -50,7 +48,7 @@ cd ../Admin_Frontend
 npm install
 ```
 
-3. **Run all development servers**
+3. **Run development servers**
 
 ```bash
 cd Backend
@@ -68,9 +66,9 @@ npm run dev
 ## 📂 Project Structure
 
 ```
-├── Admin_Frontend/       # Admin panel for managing users, theaters, and bookings
-├── Client_Frontend/      # User-facing frontend for movie browsing and ticket booking
-├── Backend/              # Node.js server with REST APIs
+├── Admin_Frontend/       # Admin panel for user, booking, and theater management
+├── Client_Frontend/      # Frontend for users to browse and book tickets
+├── Backend/              # Node.js backend with APIs for all services
 ```
 
-Let the show begin! 🎥🌟
+Grab your popcorn and enjoy the digital movie experience! 🎥🍿
